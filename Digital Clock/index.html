@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Digital Clock</title>
+</head>
+<body>
+
+    <div class="card">
+        <h4 id="time"></h4>
+        <h5 id="date"></h5>
+    </div>
+
+
+    <script>
+
+        let time1=()=>{
+            const time = new Date().toLocaleTimeString();
+            return time;
+        }
+        
+        const date = new Date().toDateString();
+
+       
+        let d = document.getElementById('date');
+
+        d.innerHTML = date;
+
+        setInterval(()=>{
+            let t = document.getElementById('time');
+            t.innerHTML = time1();
+        },1000);
+
+
+    </script>
+    
+</body>
+</html>

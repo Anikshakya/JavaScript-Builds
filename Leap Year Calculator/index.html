@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Leap Year Calculator</title>
+</head>
+<body>
+    
+    <div class="card">
+        <h4 class="name">Leap Year Calculator</h4>
+        <input class="inputStyle" id="value" type="number" placeholder="Enter a Year" required>
+        <button class="submit" type="submit" onclick="calculate()" onkeydown="">Calculate</button>
+        <p class="result" id="output"></p>
+    </div>
+
+
+    <script>
+        
+        let output = document.getElementById('output');
+        console.log(value);
+
+        function calculate(){
+            let value = document.getElementById('value').value;
+            if(value % 4 == 0){
+                if(value % 100 == 0){
+                    if (value % 400 == 0) {
+                        output.innerHTML = `The Year ${value} is a Leap Year.`;
+                    }else{
+                        output.innerHTML = `The Year ${value} is not a Leap Year.`;
+            }
+                }else{
+                     output.innerHTML = `The Year ${value} is a Leap Year.`;
+            }
+            }else{
+                output.innerHTML = `The Year ${value} is not a Leap Year.`;
+            }
+        }
+    </script>
+</body>
+</html>
